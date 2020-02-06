@@ -2,7 +2,15 @@ function hoofdstad() {
     var input1 = document.getElementById("input1");
     var input2 = document.getElementById("input2");
     var input3 = document.getElementById("input3");
-    var antw = ["Parijs", "8", "Ijsselmeer"];
+    var input4 = document.getElementById("input4");
+    var input5 = document.getElementById("input5");
+    var antw = [
+        "Parijs",
+        "8",
+        "Ijsselmeer",
+        ["Volkswagen", "Audi", "Opel", "Porsche", "BMW", "Mercedes", "Mercedes-Benz"],
+        ["Texel", "Vlieland", "Terschelling", "Ameland", "Schiermonnikoog"],
+    ];
 
     let allGood = true;
 
@@ -25,6 +33,20 @@ function hoofdstad() {
     } else {
         allGood = false;
         input3.classList.add('false');
+    }
+
+    if (antw[3].includes(input4.value)) {
+        input4.classList.add('good');
+    } else {
+        allGood = false;
+        input4.classList.add('false');
+    }
+
+    if (antw[4].includes(input5.value)) {
+        input5.classList.add('good');
+    } else {
+        allGood = false;
+        input5.classList.add('false');
     }
 
     if (allGood){
